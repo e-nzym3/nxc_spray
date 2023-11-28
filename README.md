@@ -6,7 +6,7 @@ Bash script used for password spraying CrackMapExec-supported protocols.
 
 # Prerequisites
 
-Install NetExec. Instructions on how-to can be found here: [https://github.com/Porchetta-Industries/CrackMapExec/wiki/Installation](https://www.netexec.wiki/getting-started/installation/installation-on-unix).
+Install NetExec. Instructions on how-to can be found here: https://www.netexec.wiki/getting-started/installation/installation-on-unix.
 
 # Usage
 
