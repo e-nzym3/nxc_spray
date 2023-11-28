@@ -1,6 +1,6 @@
 # nxc_spray.sh
 
-Bash script used for password spraying CrackMapExec-supported protocols.
+Bash script used for password spraying NetExec-supported protocols.
 
 **NOTE: I have not tested spraying SSH, MSSQL, or WINRM. NXC supports those protocol via the same syntax as SMB and LDAP, so it should work as intended. Your mileage may vary.**
 
